@@ -1,0 +1,3 @@
+Muenchen;18;MUC
+Berlin;30;BER
+Budapest;20;BUD
