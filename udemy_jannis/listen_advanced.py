@@ -22,3 +22,4 @@ student = {
 }
 
 print(student["Informatik"])
+
