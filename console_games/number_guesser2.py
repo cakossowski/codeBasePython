@@ -104,6 +104,53 @@ Er fordert dich zu einem Zahlenratespiel heraus!
 Wenn du nicht weißt, was du tun sollst, wäre die Frage nach 'Hilfe' eine gute Idee!
 """)
 
+class GuessingGame:
+
+    def __init__(self):
+
+        self.player_guess = 0
+        self.try_count = 0
+        self.generated_number = random_number_generator()
+        print('Deine Zahl wurde nun generiert!')
+
+    def check_guess(self, guess:int) -> bool:
+        self.try_count += 1
+        self.player_guess = int(guess)
+        self.check_low_high()
+        return self.check_range()
+
+    def check_low_high(self):
+        if self.generated_number > self.player_guess:
+            print("Deine Zahl ist niedriger, als die versteckte Zahl!")
+        elif self.generated_number < self.player_guess:
+            print("Deine Zahl ist höher, als die versteckte Zahl!")
+        else:
+            pass
+
+    # function calculates the difference between the guessed number and the "hidden" number and gives out range hint
+    def check_range(self):
+        number_distance = abs(self.generated_number - self.player_guess)
+        if 300 <= number_distance <= 999:
+            print("Lösch dich!")
+        elif 100 <= number_distance <= 299:
+            print("Immer noch Lichtjahre entfernt!")
+        elif 50 <= number_distance <= 99:
+            print("Du bist wenigstens nicht mehr 3-Stellig entfernt!")
+        elif 20 <= number_distance <= 49:
+            print("Du kommst näher!")
+        elif 10 <= number_distance <= 19:
+            print("Du bist nah dran!")
+        elif 5 <= number_distance <= 9:
+            print("Es fehlt nicht mehr viel! Du hast es fast geschafft!")
+        elif self.generated_number == self.player_guess:
+            print("ES IST UNFASSBAR, DU HAST DIE ZAHL ERRATEN!")
+            print("Noch eine Runde (Reset) oder nicht?(Beenden)")
+            return True
+        else:
+            print("Oh so knapp, komm schon!")
+        return False
+
+
 exit_program = False
 while not exit_program:
     player_input()
@@ -124,34 +171,28 @@ while not exit_program:
 
     # start of a new round
     if player_command == "start":
-        exit_loop = False
-        while not exit_loop:
-            print('Willkommen in einer Runde Zahlenraten! Deine Zahl wird jetzt generiert...')
-            # sleep time is just added to give impression to player there is some calculation done to generate the number, just for "immersion" reasons
-            time.sleep(3)
-            player_guess = 0
-            try_count = 0
-            generated_number = random_number_generator()
-            print('Deine Zahl wurde nun generiert!')
+        print('Willkommen in einer Runde Zahlenraten! Deine Zahl wird jetzt generiert...')
+        game_state = GuessingGame()
+        # sleep time is just added to give impression to player there is some calculation done to generate the number, just for "immersion" reasons
+        time.sleep(3)
 
-            while True:
-                player_input()
-                if player_command.isdigit():
-                    try_count += 1
-                    player_guess = int(player_command)
-                    check_low_high()
-                    check_range()
+        while True:
+            player_input()
+            if player_command.isdigit():
+                if game_state.check_guess(player_command):
+                    print("you won the gmae, press reset to start again.")
+                else:
+                    print("more luck next time.")
 
-                if player_command == "reset":
-                    break
+            if player_command == "reset":
+                game_state = GuessingGame()
 
-                if player_command == "versuche":
-                    print(try_count)
+            if player_command == "versuche":
+                print(game_state.try_count)
 
-                if player_command == "beenden":
-                    exit_program = True
-                    exit_loop = True
-                    break
+            if player_command == "beenden":
+                exit(0)
+
 
 
 
