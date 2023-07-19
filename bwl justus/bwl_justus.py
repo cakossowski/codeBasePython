@@ -55,3 +55,6 @@ new_player = Player(1000)
 npc_pool = npcs.generate_pool_npcs()
 
 new_player.encounter_npc()
+
+
+# kommentar zum git testen
