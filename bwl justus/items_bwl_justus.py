@@ -3,9 +3,10 @@ import random
 
 class Item:
 
-    def __init__(self, name, price):
+    def __init__(self, name, sell_price, buy_price):
         self.name = name
-        self.price = price
+        self.sell_price = sell_price
+        self.buy_price = buy_price
 
 
 def generate_item_pool():

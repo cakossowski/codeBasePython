@@ -54,4 +54,14 @@ def generate_pool_npcs():
 
     return npc_pool
 
+npc_pool = generate_pool_npcs()
+
+def generate_random_npc():
+    random_encounter_value = random.randint(1, 30)
+    random_npc = npc_pool[random_encounter_value]
+    print(f"""Du bist {random_npc.name} begegnet. 
+    Man bietet dir [{random_npc.inventory_npc[0].name}] an, 
+    es hat einen möglichen Wert von [{random_npc.inventory_npc[0].price}]""")
+    return random_npc
+
 #print(f"name: {npc_pool[10].name} inventaritem: {npc_pool[10].inventory_npc[0].name} und value item: {npc_pool[10].inventory_npc[0].price}")
