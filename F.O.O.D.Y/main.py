@@ -11,11 +11,6 @@ import current_plan
 customtkinter.set_appearance_mode("dark")  # sets the overall appearance to dark mode
 
 
-# simple function to simulate button press
-def button_callback():
-    print("button pressed")
-
-
 # creates new window, at the moment only for test purposes. all functions will be externalized at some point
 def open_new_window():
     new_window = customtkinter.CTkToplevel()  # creates new window
