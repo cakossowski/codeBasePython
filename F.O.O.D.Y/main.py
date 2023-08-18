@@ -1,9 +1,12 @@
+# standard libraries
 import customtkinter
 from PIL import Image  # needed module for image manipulation
-import subprocess  # needed for opening pdfs
-import os
-import help
 from customtkinter import CTkImage  # necessary to import images properly
+
+# my modules
+import help
+import current_plan
+
 
 customtkinter.set_appearance_mode("dark")  # sets the overall appearance to dark mode
 
@@ -11,20 +14,6 @@ customtkinter.set_appearance_mode("dark")  # sets the overall appearance to dark
 # simple function to simulate button press
 def button_callback():
     print("button pressed")
-
-
-# opens pdf
-def open_pdf():
-    # relative path to pdf, definitely works on linux
-    pdf_path = r"../F.O.O.D.Y/wochenplan.pdf"
-    # abspath shows current path of file, just kept as a reference for future me
-    # print(os.path.abspath(__file__))
-    if os.name == 'nt':  # Windows
-        os.startfile(pdf_path)
-    elif os.name == 'posix':  # macOS und Linux
-        subprocess.run(['open', pdf_path])
-    else:
-        print("Plattform nicht unterstützt")
 
 
 # creates new window, at the moment only for test purposes. all functions will be externalized at some point
@@ -59,7 +48,7 @@ title_label = customtkinter.CTkLabel(app, text="Willkommen bei F.O.O.D.Y.",
 title_label.grid(row=1, column=0, padx=30, pady=(15, 20))
 
 # creates "Aktueller Plan" / "Current Plan" - Button
-aktueller_plan = customtkinter.CTkButton(app, text="Aktueller Plan", command=open_pdf)
+aktueller_plan = customtkinter.CTkButton(app, text="Aktueller Plan", command=current_plan.open_pdf)
 aktueller_plan.grid(row=2, column=0, padx=20, pady=5)
 
 # creates "Plan generieren" / "Generate Plan" - Button
