@@ -1,6 +1,7 @@
 # standard libraries
 import customtkinter
 from PIL import Image  # needed module for image manipulation
+from PIL import Image, ImageTk # seems necessary to export file into exe
 from customtkinter import CTkImage  # necessary to import images properly
 
 # my modules
@@ -34,7 +35,7 @@ app.geometry("360x400")
 app.grid_columnconfigure(0, weight=1)
 
 # sets logo image and places it into grid
-image = CTkImage(Image.open("../F.O.O.D.Y/logo.png"), size=(125, 60))
+image = CTkImage(Image.open("logo.png"), size=(125, 60))
 title_image = customtkinter.CTkLabel(app, image=image, text="")
 title_image.grid(row=0, column=0, padx=20, pady=5)
 
@@ -67,3 +68,4 @@ beenden = customtkinter.CTkButton(app, text="Beenden", command=app.quit)
 beenden.grid(row=8, column=0, padx=20, pady=30)
 
 app.mainloop()
+

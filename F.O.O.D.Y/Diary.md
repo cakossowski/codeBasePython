@@ -16,3 +16,12 @@ sets the path in relation to the used user OS
 
 Ideas of this day:
 - follow advice and maybe pack "window management" in own module oder pre-create certain sets?
+
+## 21st Aug 23:
+- experimenting with PyInstaller
+- seems like not all packages are packed by PyInstaller
+- fixed issue where logo.png couldnt be opened
+
+## 22nd Aug 23:
+- running into issue with opening PDf File on Linux after making it an exe
+- found possible workaround, but unfortunately doesn't work for me at all
