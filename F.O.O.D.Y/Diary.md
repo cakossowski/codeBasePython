@@ -20,8 +20,12 @@ Ideas of this day:
 ## 21st Aug 23:
 - experimenting with PyInstaller
 - seems like not all packages are packed by PyInstaller
-- fixed issue where logo.png couldnt be opened
+- fixed issue where logo.png couldn't be opened
 
 ## 22nd Aug 23:
-- running into issue with opening PDf File on Linux after making it an exe
+- running into issue with opening PDF File on Linux after making it an exe
 - found possible workaround, but unfortunately doesn't work for me at all
+- all modules are externalized in different .py files
+- also changed "new_window" method name to corresponding method name in file
+- cleaned up a few typos
+- 

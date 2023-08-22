@@ -7,26 +7,12 @@ from customtkinter import CTkImage  # necessary to import images properly
 # my modules
 import help
 import current_plan
+import manage_dishes
+import manage_ingredients
+import generate_plan
 
 
 customtkinter.set_appearance_mode("dark")  # sets the overall appearance to dark mode
-
-
-# creates new window, at the moment only for test purposes. all functions will be externalized at some point
-def open_new_window():
-    new_window = customtkinter.CTkToplevel()  # creates new window
-    new_window.focus_set()  # sets focus on this window
-    new_window.attributes('-topmost', True)  # topmost ensures that window is displayed in foreground
-    new_window.title("Neues Fenster")  # titles new window
-    new_window.geometry("200x150")  # sets size of window
-
-    # labels the window when opened, like a headline of the window
-    label = customtkinter.CTkLabel(new_window, text="Dies ist ein neues Fenster!")
-    label.pack(pady=20)
-
-    # creates the close button, which destroys the current window on press
-    close_button = customtkinter.CTkButton(new_window, text="Zurück", command=new_window.destroy)
-    close_button.pack(pady=20)
 
 
 app = customtkinter.CTk()
@@ -48,15 +34,15 @@ aktueller_plan = customtkinter.CTkButton(app, text="Aktueller Plan", command=cur
 aktueller_plan.grid(row=2, column=0, padx=20, pady=5)
 
 # creates "Plan generieren" / "Generate Plan" - Button
-plan_generieren = customtkinter.CTkButton(app, text="Plan generieren", command=open_new_window)
+plan_generieren = customtkinter.CTkButton(app, text="Plan generieren", command=generate_plan.open_generate_plan)
 plan_generieren.grid(row=3, column=0, padx=20, pady=5)
 
 # creates "Gerichte verwalten" / "Manage Dishes" - Button
-gerichte_verwalten = customtkinter.CTkButton(app, text="Gerichte verwalten", command=open_new_window)
+gerichte_verwalten = customtkinter.CTkButton(app, text="Gerichte verwalten", command=manage_dishes.open_dishes)
 gerichte_verwalten.grid(row=4, column=0, padx=20, pady=5)
 
 # creates "Zutaten verwalten" / "Manage Ingredients" - Button
-zutaten_verwalten = customtkinter.CTkButton(app, text="Zutaten verwalten", command=open_new_window)
+zutaten_verwalten = customtkinter.CTkButton(app, text="Zutaten verwalten", command=manage_ingredients.open_ingredients)
 zutaten_verwalten.grid(row=5, column=0, padx=20, pady=5)
 
 # creates "Hilfe" / "Help" - Button
