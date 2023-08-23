@@ -33,4 +33,9 @@ Ideas of this day:
 - started working on interfaces corresponding to each function
 - interface for generate_plan is finished / proper graphics for buttons missing
 - added first clickable checkboxes as filter, that already set a true/false for each filter
-- 
+- tried to fix the issue of opening the pdf from the exe directly, 
+  only was possible after I added the file to PyInstaller directly and after copying it manually to the directory
+- the issue of opening any files with created .exe files with PyInstaller is that it tries to open something from the tmp
+  files of your computer, which makes relative pathing useless
+- need to look for other tool, workaround or in dire need for completely different solution
+- added button images to git, implementation for interface will probably follow tomorrow

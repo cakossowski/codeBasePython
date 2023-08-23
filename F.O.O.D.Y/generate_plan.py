@@ -1,6 +1,6 @@
 # standard libraries
 import customtkinter
-from PIL import Image, ImageTk # seems necessary to export file into exe
+from PIL import Image, ImageTk  # seems necessary to export file into exe
 from customtkinter import CTkImage  # necessary to import images properly
 
 customtkinter.set_appearance_mode("dark")  # sets the overall appearance to dark mode
@@ -33,6 +33,7 @@ def open_generate_plan():
 
     def checkbox_event(checkbox_var):
         print(f"checkbox {checkbox_var} toggled, current value:", checkbox_var.get())
+
     # heading for window
     label = customtkinter.CTkLabel(generate_plan_window, text="Stelle hier deinen Plan zusammen!")
     label.grid(row=0, padx=10, pady=5, sticky="w")
@@ -60,12 +61,12 @@ def open_generate_plan():
 
     # creates the remove_dish button
     button_remove_dish = customtkinter.CTkButton(frame_buttons_dish_list, text="REM", corner_radius=10,
-                                              command=button_press_remove_dish, height=65, width=65)
+                                                 command=button_press_remove_dish, height=65, width=65)
     button_remove_dish.grid(row=1, column=0, padx=5, pady=5, sticky="w")
 
     # creates the edit_dish button
     button_edit_dish = customtkinter.CTkButton(frame_buttons_dish_list, text="EDIT", corner_radius=10,
-                                              command=button_press_edit_list, height=65, width=65)
+                                               command=button_press_edit_list, height=65, width=65)
     button_edit_dish.grid(row=2, column=0, padx=5, pady=5, sticky="w")
 
     # creates the reset button, which destroys the current window on press
