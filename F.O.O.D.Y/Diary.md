@@ -39,3 +39,4 @@ Ideas of this day:
   files of your computer, which makes relative pathing useless
 - need to look for other tool, workaround or in dire need for completely different solution
 - added button images to git, implementation for interface will probably follow tomorrow
+- couldn't wait until tomorrow, had to add the images as the buttons, although implementation isn't perfect at the moment

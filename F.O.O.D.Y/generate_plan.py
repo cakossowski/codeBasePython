@@ -2,6 +2,7 @@
 import customtkinter
 from PIL import Image, ImageTk  # seems necessary to export file into exe
 from customtkinter import CTkImage  # necessary to import images properly
+from tkinter import PhotoImage  # needed to turn images into buttons
 
 customtkinter.set_appearance_mode("dark")  # sets the overall appearance to dark mode
 customtkinter.set_default_color_theme("blue")  # sets the overall color theme for buttons, etc.
@@ -55,18 +56,25 @@ def open_generate_plan():
     frame_buttons_bottom.grid(row=10, column=0, pady=5)
 
     # creates the add_dish button
-    button_add_dish = customtkinter.CTkButton(frame_buttons_dish_list, text="ADD", corner_radius=10,
-                                              command=button_press_add_dish, height=65, width=65)
+    image_add_button = customtkinter.CTkImage(Image.open("add_button.png"), size=(60, 60))
+    button_add_dish = customtkinter.CTkButton(frame_buttons_dish_list, image=image_add_button, text="",
+                                              command=button_press_add_dish, height=60, width=60,
+                                              fg_color="transparent")
     button_add_dish.grid(row=0, column=0, padx=5, pady=5, sticky="w")
 
     # creates the remove_dish button
-    button_remove_dish = customtkinter.CTkButton(frame_buttons_dish_list, text="REM", corner_radius=10,
-                                                 command=button_press_remove_dish, height=65, width=65)
+    image_trash_button = customtkinter.CTkImage(Image.open("trash_button.png"), size=(60, 60))
+    button_remove_dish = customtkinter.CTkButton(frame_buttons_dish_list, image=image_trash_button, text="",
+                                                 command=button_press_remove_dish,
+                                                 height=60, width=60,
+                                                 fg_color="transparent")
     button_remove_dish.grid(row=1, column=0, padx=5, pady=5, sticky="w")
 
     # creates the edit_dish button
-    button_edit_dish = customtkinter.CTkButton(frame_buttons_dish_list, text="EDIT", corner_radius=10,
-                                               command=button_press_edit_list, height=65, width=65)
+    image_edit_button = customtkinter.CTkImage(Image.open("edit_button.png"), size=(60, 60))
+    button_edit_dish = customtkinter.CTkButton(frame_buttons_dish_list, image=image_edit_button, text="",
+                                               command=button_press_edit_list, height=60, width=60,
+                                               fg_color="transparent")
     button_edit_dish.grid(row=2, column=0, padx=5, pady=5, sticky="w")
 
     # creates the reset button, which destroys the current window on press
