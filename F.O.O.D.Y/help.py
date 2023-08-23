@@ -1,5 +1,9 @@
 import customtkinter
 
+customtkinter.set_appearance_mode("dark")  # sets the overall appearance to dark mode
+customtkinter.set_default_color_theme("blue")  # sets the overall color theme for buttons, etc.
+
+
 # help text, probably will be changed in the future
 help_text = """
 

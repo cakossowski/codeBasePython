@@ -28,4 +28,9 @@ Ideas of this day:
 - all modules are externalized in different .py files
 - also changed "new_window" method name to corresponding method name in file
 - cleaned up a few typos
+
+## 23rd Aug 23:
+- started working on interfaces corresponding to each function
+- interface for generate_plan is finished / proper graphics for buttons missing
+- added first clickable checkboxes as filter, that already set a true/false for each filter
 - 
