@@ -95,7 +95,6 @@ def open_generate_plan():
     check_vegan = customtkinter.StringVar(value="off")
     check_vegetarian = customtkinter.StringVar(value="off")
 
-
     # this is the beginning of the filter section, all filters have to be set manually
 
     # filter keto

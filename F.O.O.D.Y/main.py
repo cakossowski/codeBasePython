@@ -1,6 +1,5 @@
 # standard libraries
 import customtkinter
-from PIL import Image  # needed module for image manipulation
 from PIL import Image, ImageTk  # seems necessary to export file into exe
 from customtkinter import CTkImage  # necessary to import images properly
 
