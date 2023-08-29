@@ -40,3 +40,11 @@ Ideas of this day:
 - need to look for other tool, workaround or in dire need for completely different solution
 - added button images to git, implementation for interface will probably follow tomorrow
 - couldn't wait until tomorrow, had to add the images as the buttons, although implementation isn't perfect at the moment
+
+## 24th Aug 23:
+- started to look into classes with CTk
+- also tried to implement in tests
+- started with pass generator app with a gui
+
+## 25th Aug 23:
+- proceeding to work on SHIELD
