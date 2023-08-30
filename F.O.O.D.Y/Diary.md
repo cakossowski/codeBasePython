@@ -48,3 +48,13 @@ Ideas of this day:
 
 ## 25th Aug 23:
 - proceeding to work on SHIELD
+
+## 28th Aug 23:
+- somehow worked out classes in Ctk, but code looks messier then without
+
+## 29th Aug 23:
+- started with SQLite in Python
+
+## 30th Aug 23:
+- Journey with SQL goes on, I am testing a little "trash code" to get going with it
+
