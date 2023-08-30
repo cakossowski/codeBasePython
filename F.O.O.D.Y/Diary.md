@@ -57,4 +57,11 @@ Ideas of this day:
 
 ## 30th Aug 23:
 - Journey with SQL goes on, I am testing a little "trash code" to get going with it
+- decided to use SQLite and probably will scrap the idea with the PDF file, causes too much hassle for now
 
+Idea of this day:
+- Just display the finished meal plan in a table, Treeview seemed like a reasonable option for like 2 seconds
+but probably will try out tksheet or prettytable lib
+- also might "dumb down" the app a bit and will leave out the whole stuff with ingredients
+- for now, it should be sufficient to be able to create meals by name and then sort that out a plan in a table
+without the hassle of ingredients and stuff, like a prototype
