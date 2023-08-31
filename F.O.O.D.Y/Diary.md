@@ -65,3 +65,7 @@ but probably will try out tksheet or prettytable lib
 - also might "dumb down" the app a bit and will leave out the whole stuff with ingredients
 - for now, it should be sufficient to be able to create meals by name and then sort that out a plan in a table
 without the hassle of ingredients and stuff, like a prototype
+
+## 31st Aug 23:
+- added directories to project to clean up the structure
+- started working on class structure nonetheless

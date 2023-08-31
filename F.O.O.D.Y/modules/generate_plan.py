@@ -56,14 +56,14 @@ def open_generate_plan():
     frame_buttons_bottom.grid(row=10, column=0, pady=5)
 
     # creates the add_dish button
-    image_add_button = customtkinter.CTkImage(Image.open("add_button.png"), size=(60, 60))
+    image_add_button = customtkinter.CTkImage(Image.open("../resources/add_button.png"), size=(60, 60))
     button_add_dish = customtkinter.CTkButton(frame_buttons_dish_list, image=image_add_button, text="",
                                               command=button_press_add_dish, height=60, width=60,
                                               fg_color="transparent")
     button_add_dish.grid(row=0, column=0, padx=5, pady=5, sticky="w")
 
     # creates the remove_dish button
-    image_trash_button = customtkinter.CTkImage(Image.open("trash_button.png"), size=(60, 60))
+    image_trash_button = customtkinter.CTkImage(Image.open("../resources/trash_button.png"), size=(60, 60))
     button_remove_dish = customtkinter.CTkButton(frame_buttons_dish_list, image=image_trash_button, text="",
                                                  command=button_press_remove_dish,
                                                  height=60, width=60,
@@ -71,7 +71,7 @@ def open_generate_plan():
     button_remove_dish.grid(row=1, column=0, padx=5, pady=5, sticky="w")
 
     # creates the edit_dish button
-    image_edit_button = customtkinter.CTkImage(Image.open("edit_button.png"), size=(60, 60))
+    image_edit_button = customtkinter.CTkImage(Image.open("../resources/edit_button.png"), size=(60, 60))
     button_edit_dish = customtkinter.CTkButton(frame_buttons_dish_list, image=image_edit_button, text="",
                                                command=button_press_edit_list, height=60, width=60,
                                                fg_color="transparent")

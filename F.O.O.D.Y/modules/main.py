@@ -1,6 +1,6 @@
 # standard libraries
 import customtkinter
-from PIL import Image, ImageTk  # seems necessary to export file into exe
+from PIL import Image  # seems necessary to export file into exe
 from customtkinter import CTkImage  # necessary to import images properly
 
 # my modules
@@ -21,7 +21,7 @@ app.geometry("360x400")
 app.grid_columnconfigure(0, weight=1)
 
 # sets logo image and places it into grid
-image = CTkImage(Image.open("logo.png"), size=(125, 60))
+image = CTkImage(Image.open("../resources/logo.png"), size=(125, 60))
 title_image = customtkinter.CTkLabel(app, image=image, text="")
 title_image.grid(row=0, column=0, padx=20, pady=5)
 
